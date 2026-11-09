@@ -2,7 +2,7 @@ import { defineConfig } from "cf/config";
 
 export default defineConfig({
   worker: {
-    "name": "zoojelly",
+    "name": "altzoo",
     "compatibilityDate": "2026-09-21",
     "observability": {
       "enabled": true
