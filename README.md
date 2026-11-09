@@ -5,7 +5,7 @@ animals up close — each species lives in a diorama built to match its real
 habitat, with locomotion-aware animation, tactile sound cues, and an
 encyclopedia-style info panel.
 
-**Live repo:** [github.com/Ikziriv/zoojelly](https://github.com/Ikziriv/zoojelly)
+**Live repo:** [github.com/Ikziriv/altzoo-tfmkit](https://github.com/Ikziriv/altzoo-tfmkit)
 **Created by:** [ikziriv](https://ikziriv.com)
 
 <video src="video.mp4" controls muted></video>
