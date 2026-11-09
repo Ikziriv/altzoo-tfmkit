@@ -1,0 +1,788 @@
+{
+  "brand": {
+    "name": "Field & Abyss",
+    "tagline": "atlas kebun binatang & laut",
+    "home": "Rumah Atlas Lapangan"
+  },
+  "app": {
+    "title": "Field Atlas: kebun binatang hidup",
+    "skip": "Lewati ke spesimen"
+  },
+  "nav": {
+    "home": "Rumah",
+    "collections": "Koleksi",
+    "expandSidebar": "Luaskan bilah sisi",
+    "collapseSidebar": "Ciutkan bilah sisi",
+    "count_other": "{{count}} spesies"
+  },
+  "groups": {
+    "featured": "Unggulan",
+    "mammals": "Mamalia",
+    "birds": "Burung",
+    "reptiles": "Reptil",
+    "ocean": "Samudera & Terumbu Karang",
+    "abyss": "Laut Dalam",
+    "savanna": "Sabana & Stepa"
+  },
+  "featured": {
+    "eyebrow": "Spesies unggulan",
+    "lookCloser": "Lihatlah lebih dekat"
+  },
+  "rail": {
+    "cards": "Kartu-kartu",
+    "rows": "Baris kompak",
+    "layout": "Tata letak kartu",
+    "aria": "Jenis",
+    "empty": "Tidak ada hewan yang cocok dengan “{{query}}”.",
+    "count_other": "{{count}} spesies"
+  },
+  "panel": {
+    "keyTraits": "Sifat Utama",
+    "habitat": "Habitat",
+    "notes": "Catatan spesimen",
+    "credit": "3D “{{title}}” oleh <0>{{author}}</0>",
+    "expand": "Perluas panel",
+    "collapse": "Ciutkan panel"
+  },
+  "search": {
+    "label": "Cari spesies",
+    "placeholder": "Cari spesies, habitat atau sifat…"
+  },
+  "stage": {
+    "aria": "penampil 3D. Seret atau gunakan tombol panah untuk memutar, mencubit, menggulir atau plus dan minus untuk memperbesar, 0 untuk mengatur ulang, H untuk menyembunyikan habitat.",
+    "loading": "Mempersiapkan spesimen…",
+    "loadingHint": "Memuat geometri, tekstur, dan gerak.",
+    "loadError": "{{name}} tidak dapat memuat",
+    "loadErrorHint": "Pilih spesies lain dari koleksi.",
+    "exitDetail": "Keluar dari jarak dekat",
+    "zoomIn": "Perbesar",
+    "zoomOut": "Perkecil",
+    "fullscreen": "Beralih ke layar penuh",
+    "pauseMotion": "Jeda gerakan hewan",
+    "resumeMotion": "Lanjutkan gerakan binatang",
+    "hideHabitat": "Sembunyikan habitat",
+    "showHabitat": "Tunjukkan habitat",
+    "toNight": "Beralih ke safari malam",
+    "toDay": "Beralih ke siang hari",
+    "spinLeft": "Putar ke kiri 360 derajat",
+    "spinRight": "Putar ke kanan 360 derajat",
+    "resetView": "Setel ulang tampilan",
+    "toolbar": "Alat tampilan"
+  },
+  "habitats": {
+    "savanna": "Sabana Akasia Afrika Timur",
+    "polar": "Es Laut Antartika & Es Bungkus",
+    "forest": "Awan & Hutan Hujan Dataran Rendah",
+    "wetland": "Laguna Muara & Reed Marsh",
+    "reef": "Laguna Karang & Lereng Terumbu Karang yang Disinari Matahari",
+    "abyss": "Lereng Bathyal & Parit Pelagis Dalam"
+  },
+  "language": {
+    "label": "Bahasa"
+  },
+  "species": {
+    "fox": {
+      "name": "Rubah Merah",
+      "tags": [
+        "Kusam",
+        "Penerkam tikus",
+        "Rasa magnetis"
+      ],
+      "description": "Rubah merah adalah karnivora liar yang paling tersebar luas di Bumi, baik di tundra Arktik maupun di taman kota. Ia dapat mendengar suara tikus mencicit di bawah salju setinggi satu meter, lalu melompat tinggi dan menyelam terlebih dahulu untuk menjepitnya.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "45–90 cm, ditambah ekor"
+        },
+        {
+          "label": "Berat",
+          "value": "3–14kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Hewan pengerat, kelinci, buah beri, dan serangga"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Di belahan bumi utara"
+        }
+      ],
+      "habitat": "Tepi hutan, lahan pertanian, tundra, dan kota.",
+      "caption": "Bayangan berwarna api yang berburu dengan telinganya.",
+      "featured": {
+        "headline": "Ekor seperti syal.",
+        "text": "Melilit hidungnya di malam yang dingin, mengarahkannya ke tengah hari di siang hari."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Sikatnya sepertiga panjangnya: syal di musim dingin dan kemudi di tengah menerkam."
+      }
+    },
+    "elephant": {
+      "name": "Gajah Semak Afrika",
+      "tags": [
+        "Matriarkal",
+        "Penelepon infrasonik",
+        "Insinyur batu kunci"
+      ],
+      "description": "Hewan darat terbesar di Bumi mengubah seluruh lanskap, menumbangkan pohon untuk membuka padang rumput, dan menggali sumur di musim kemarau yang menjadi tempat bergantung hewan lain. Keluarga-keluarga tetap berkomunikasi dalam jarak beberapa kilometer menggunakan suara gemuruh rendah yang dirasakan melalui tanah.",
+      "traits": [
+        {
+          "label": "Tinggi",
+          "value": "3,0–3,8 m di bahu"
+        },
+        {
+          "label": "Berat",
+          "value": "4.000–7.000kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Rumput, kulit kayu, akar dan buah"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Afrika Sub-Sahara"
+        }
+      ],
+      "habitat": "Hutan sabana, dataran banjir, dan pinggiran gurun.",
+      "caption": "Empat puluh ribu otot dalam satu batang, cukup lembut untuk mengangkat sebutir benih.",
+      "featured": {
+        "headline": "Telinga berbentuk seperti Afrika.",
+        "text": "Dijalin dengan pembuluh darah yang mendinginkan hingga 12 liter darah per menit."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Dua ujung seperti jari di ujung batang dapat memetik sehelai rumput atau mengangkat sebatang kayu."
+      }
+    },
+    "giraffe": {
+      "name": "Jerapah Retikulat",
+      "tags": [
+        "Tujuh vertebra leher",
+        "Lidah yang mudah patah",
+        "Lapisi seperti kaca patri"
+      ],
+      "description": "Poligon kastanye yang dibingkai oleh garis-garis krem ​​​​yang tajam menyamarkan jerapah jala di antara duri akasia yang terkena sinar matahari. Meskipun lehernya dua meter, ia memiliki jumlah tulang leher yang sama persis dengan tikus: tujuh.",
+      "traits": [
+        {
+          "label": "Tinggi",
+          "value": "4,6–5,7 m"
+        },
+        {
+          "label": "Berat",
+          "value": "800–1.600kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Daun, pucuk dan polong akasia"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Kenya, Somalia dan Etiopia"
+        }
+      ],
+      "habitat": "Sabana akasia dan hutan terbuka kering.",
+      "caption": "Menara pengawas yang mengamati puncak pohon dalam keheningan.",
+      "featured": {
+        "headline": "Lidah ungu berukuran 45 cm.",
+        "text": "Tangguh dan gelap untuk mencegah sengatan matahari sambil mengupas dahan yang berduri."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Tanduk yang tertutup kulit yang disebut ossicones menunjukkan sekilas usia dan jenis kelamin jerapah."
+      }
+    },
+    "horse": {
+      "name": "Kuda Przewalski",
+      "tags": [
+        "Tidak pernah dijinakkan",
+        "Hidup dalam kawanan",
+        "Diperkenalkan kembali"
+      ],
+      "description": "Kekar, berwarna coklat kehitaman dan tidak pernah dijinakkan, kuda Przewalski pernah lenyap seluruhnya dari alam liar. Dibesarkan dari segelintir hewan kebun binatang, kawanannya kini berkeliaran lagi di padang rumput Mongolia.",
+      "traits": [
+        {
+          "label": "Tinggi",
+          "value": "1,2–1,4 m di bahu"
+        },
+        {
+          "label": "Berat",
+          "value": "200–350kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Rumput dan tanaman stepa"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Mongolia, Cina, Kazakstan"
+        }
+      ],
+      "habitat": "Padang rumput terbuka dan padang rumput semi-gurun.",
+      "caption": "Pergi dari alam liar, lalu berlari kembali.",
+      "featured": {
+        "headline": "Kembali dari tepi jurang.",
+        "text": "Setiap orang yang hidup saat ini hanya berasal dari dua belas pendiri."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Surai tegak seperti mohawk tanpa jambul, rontok dan tumbuh kembali setiap musim semi."
+      }
+    },
+    "lion": {
+      "name": "Singa Afrika",
+      "tags": [
+        "Pemburu kebanggaan",
+        "Penjaga sabana",
+        "Penelepon kooperatif"
+      ],
+      "description": "Singa adalah kucing besar yang paling sosial, hidup dalam kelompok yang bekerja sama untuk membesarkan anak, mempertahankan wilayah, dan berburu. Singa betina melakukan sebagian besar perburuan sementara singa jantan membantu melindungi kelompoknya, dan paduan suara mereka yang mengaum membuat kelompok tetangga tetap saling berhubungan.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "1,7–2,5 m, tidak termasuk ekor"
+        },
+        {
+          "label": "Berat",
+          "value": "110–250kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Antelope, zebra, kerbau dan mangsa yang lebih kecil"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Afrika Sub-Sahara"
+        }
+      ],
+      "habitat": "Sabana terbuka, padang rumput, hutan kering, dan semak belukar.",
+      "caption": "Siluet emas menyatukan padang rumput.",
+      "featured": {
+        "headline": "Raungan yang menyebar.",
+        "text": "Anggota Pride saling menjawab satu sama lain di padang rumput, mengiklankan kehadiran tanpa konfrontasi."
+      },
+      "closeup": {
+        "title": "Lidah seperti serak",
+        "text": "Papila yang mengarah ke belakang di lidah membantu singa mengikis daging dari tulang dan merapikan bulunya."
+      }
+    },
+    "tiger": {
+      "name": "Harimau Benggala",
+      "tags": [
+        "Penyergapan sendirian",
+        "Kucing berenang",
+        "Garis-garis yang tidak dapat diulang"
+      ],
+      "description": "Harimau Bengal bergerak sendirian melintasi hutan, rerumputan tinggi, dan hutan bakau, menggunakan kamuflase bergaris untuk mendekat dalam jarak serang. Setiap harimau memiliki pola yang unik, dan tidak seperti kebanyakan kucing, ia siap memasuki perairan dalam untuk berenang dan menenangkan diri.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "2,4–3,1 m, termasuk ekor"
+        },
+        {
+          "label": "Berat",
+          "value": "100–260kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Rusa, babi hutan, kerbau dan binatang kecil"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "India, Nepal, Bhutan, dan Bangladesh"
+        }
+      ],
+      "habitat": "Hutan tropis, padang rumput tinggi, tepi sungai dan hutan bakau.",
+      "caption": "Garis bayangan bergerak di tempat hutan terbelah.",
+      "featured": {
+        "headline": "Tidak ada dua lapisan yang setuju.",
+        "text": "Belang harimau bersifat individual seperti sidik jari, mematahkan garis luarnya di antara rerumputan dan pepohonan."
+      },
+      "closeup": {
+        "title": "Dibangun untuk penyergapan",
+        "text": "Bagian depan yang kuat dan pendekatan yang rendah dan sabar lebih menyukai tindakan cepat yang menentukan daripada pengejaran yang lama."
+      }
+    },
+    "jellyfish": {
+      "name": "Jelatang Laut Pasifik",
+      "tags": [
+        "bercahaya",
+        "95% air",
+        "Pita tambahan"
+      ],
+      "description": "Lonceng kuning bercahaya setinggi satu meter berdenyut melalui upwelling Pasifik yang sejuk, mengikuti dua puluh empat tentakel merah marun dan empat lengan mulut acak-acakan yang berliku seperti pita sutra di arus.",
+      "traits": [
+        {
+          "label": "Lebar lonceng",
+          "value": "Hingga 1 m (lengan hingga 4,5 m)"
+        },
+        {
+          "label": "Kedalaman",
+          "value": "Permukaan hingga 100 m"
+        },
+        {
+          "label": "Diet",
+          "value": "Zooplankton, ubur-ubur sisir, ikan-ikan kecil"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Pasifik Timur dari Alaska hingga Meksiko"
+        }
+      ],
+      "habitat": "Upwelling pantai yang dingin dan perbatasan hutan rumput laut.",
+      "caption": "Sebuah lentera dari kaca hidup, menunggangi air pasang pantai.",
+      "featured": {
+        "headline": "Tidak punya otak, namun ia berburu.",
+        "text": "Rhopalia peka cahaya di sekitar tepi lonceng mengarahkannya menuju fajar."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Empat lengan mulut berjumbai berputar dari tengah bel, membawa kapsul mikroskopis yang menyengat."
+      }
+    },
+    "dumbo": {
+      "name": "Gurita bodoh",
+      "tags": [
+        "Gurita bersirip",
+        "Pengembara dasar laut",
+        "Tidak ada kantung tinta"
+      ],
+      "description": "Dinamakan berdasarkan sirip mirip telinga yang dikepakkannya untuk berenang, gurita dumbo melayang tepat di atas dasar laut jurang dalam kegelapan yang hampir membekukan. Ia tidak memiliki kantung tinta—tidak ada cahaya untuk bersembunyi—dan menelan mangsanya utuh-utuh.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "Biasanya 20–30 cm"
+        },
+        {
+          "label": "Kedalaman",
+          "value": "1.000–4.000 m dan seterusnya"
+        },
+        {
+          "label": "Diet",
+          "value": "Cacing, kopepoda, dan amphipoda"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Lautan dalam di seluruh dunia"
+        }
+      ],
+      "habitat": "Tepat di atas dasar laut pada lereng yang dalam dan dataran jurang.",
+      "caption": "Dua sirip, delapan lengan, dan tidak perlu terburu-buru.",
+      "featured": {
+        "headline": "Telinga yang benar-benar sirip.",
+        "text": "Perenang yang lembut dan lambat di antara gurita yang hidup paling dalam."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Sebuah jaring kulit menghubungkan kedelapan lengannya, sehingga hewan tersebut dapat menyebar seperti payung dan melayang."
+      }
+    },
+    "nautilus": {
+      "name": "Kamar Nautilus",
+      "tags": [
+        "Fosil hidup",
+        "Cangkang bilik",
+        "Berbahan bakar jet"
+      ],
+      "description": "Nautilus telah mengapung di kedalaman laut selama 500 juta tahun dan hampir tidak berubah. Ia naik dan turun dengan memompa gas dan air melalui ruang tertutup pada cangkang spiral logaritmiknya.",
+      "traits": [
+        {
+          "label": "Lebar cangkang",
+          "value": "Lebar hingga 20 cm"
+        },
+        {
+          "label": "Kedalaman",
+          "value": "100–700 m"
+        },
+        {
+          "label": "Diet",
+          "value": "Udang, kepiting, dan bangkai karang dalam"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Terumbu karang Indo-Pasifik"
+        }
+      ],
+      "habitat": "Lereng terumbu karang yang curam, dalam pada siang hari dan lebih dangkal pada malam hari.",
+      "caption": "Sebuah spiral yang lebih tua dari pegunungan, masih menghitung ruangannya.",
+      "featured": {
+        "headline": "Sebuah cangkang yang mengingat.",
+        "text": "Berusia setengah miliar tahun dan masih terus meningkat setiap malam."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Setiap garis api mengikuti pertumbuhan cangkang, dan ruang nacre baru ditutup seiring pertumbuhannya."
+      }
+    },
+    "manta": {
+      "name": "Manta Samudera Raksasa",
+      "tags": [
+        "Lebar sayap 7 meter",
+        "Pesawat layang Plankton",
+        "Otak terbesar dari semua ikan"
+      ],
+      "description": "Dengan sayap dada berbentuk segitiga yang membentang hingga tujuh meter, manta samudera raksasa ini terbang dengan mudah di perairan terbuka. Sepasang sirip cephalic seperti tanduk terbuka di depan mulutnya untuk menyalurkan plankton ke dalamnya.",
+      "traits": [
+        {
+          "label": "Lebar sayap",
+          "value": "4,5–7,0 m"
+        },
+        {
+          "label": "Berat",
+          "value": "Hingga 2.000kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Krill, kopepoda dan larva ikan"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Lautan tropis dan beriklim sedang"
+        }
+      ],
+      "habitat": "Perairan pelagis terbuka, gunung laut dan stasiun pembersihan.",
+      "caption": "Bayangan yang lebih lebar dari sebuah ruangan, terbang melintasi air biru.",
+      "featured": {
+        "headline": "Cetakan perut seperti sidik jari.",
+        "text": "Setiap manta mempunyai pola bintik unik di bawahnya."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Sirip cephalic melengkung menjadi tanduk yang rapat saat berlayar dan membentang seperti corong saat makan."
+      }
+    },
+    "whale": {
+      "name": "Paus Bungkuk",
+      "tags": [
+        "Pemburu jaring gelembung",
+        "Lagu yang rumit",
+        "Migran dari kutub ke daerah tropis"
+      ],
+      "description": "Dinamakan berdasarkan lengkungan punggungnya sebelum menyelam lebih dalam, paus bungkuk menyanyikan lagu-lagu yang menghantui dan berevolusi yang menempuh jarak ratusan kilometer melintasi lautan dan bekerja sama untuk menjebak ikan dalam spiral gelembung.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "13–16 m"
+        },
+        {
+          "label": "Berat",
+          "value": "25.000–35.000kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Krill, ikan haring dan capelin"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Semua lautan besar, dari kutub hingga khatulistiwa"
+        }
+      ],
+      "habitat": "Koridor migrasi laut terbuka dan tempat mencari makan di pesisir.",
+      "caption": "Sebuah lagu yang melintasi lautan, dinyanyikan dalam kegelapan.",
+      "featured": {
+        "headline": "Panjang sayap lima meter.",
+        "text": "Sirip dada terpanjang dari cetacea mana pun memberinya ketangkasan akrobatik."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Lipatan tenggorokan bagian ventral melebar seperti akordeon, membiarkan paus menelan genangan air dalam satu tegukan."
+      }
+    },
+    "turtle": {
+      "name": "Penyu Hijau",
+      "tags": [
+        "Tukang kebun lamun",
+        "Navigator geomagnetik",
+        "Pulang ke pantai Natal"
+      ],
+      "description": "Berlayar di antara terumbu karang dan padang lamun, penyu hijau dewasa merupakan satu-satunya penyu herbivora. Dipandu oleh medan magnet bumi, betina kembali menempuh jarak ribuan kilometer untuk bersarang di pantai tempat mereka menetas.",
+      "traits": [
+        {
+          "label": "Karapas",
+          "value": "80–120 cm"
+        },
+        {
+          "label": "Berat",
+          "value": "110–190kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Lamun dan ganggang laut"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Laut tropis dan subtropis"
+        }
+      ],
+      "habitat": "Terumbu karang, laguna, dan padang lamun pesisir.",
+      "caption": "Kompas kuno, berenang pulang melintasi lautan.",
+      "featured": {
+        "headline": "Satu tarikan napas selama berjam-jam.",
+        "text": "Kura-kura yang beristirahat dapat memperlambat detak jantungnya hingga satu detak setiap sembilan menit."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Sisik karapas tetesan air mata menyatu seperti mosaik, ramping untuk melewati arus yang kuat."
+      }
+    },
+    "crocodile": {
+      "name": "Buaya Nil",
+      "tags": [
+        "Penyergapan garis air",
+        "Kulit lapis baja",
+        "Orang tua yang penuh perhatian"
+      ],
+      "description": "Buaya Nil menunggu hampir tak bergerak di tepi air, lalu meledak ke depan untuk menangkap mangsanya dengan gigitan yang sangat besar. Di balik penampilan luarnya yang sabar terdapat orangtua yang penuh perhatian: betina menjaga sarang dan menggendong anak yang baru menetas dengan lembut di rahangnya.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "3–5 m"
+        },
+        {
+          "label": "Berat",
+          "value": "225–750kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Ikan, burung, kijang dan bangkai"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Afrika Sub-Sahara dan Cekungan Nil"
+        }
+      ],
+      "habitat": "Sungai, danau, dataran banjir, lahan basah dan muara.",
+      "caption": "Masih air, lalu tiba-tiba deras.",
+      "featured": {
+        "headline": "Rahang yang tidak mengunyah.",
+        "text": "Buaya mencengkeram dan merobek makanannya, lalu menelan potongan-potongan yang bisa dimakan alih-alih dikunyah."
+      },
+      "closeup": {
+        "title": "Kelopak mata ketiga",
+        "text": "Selaput nictitating tembus pandang menyapu mata untuk perlindungan saat buaya berada di bawah air."
+      }
+    },
+    "barramundi": {
+      "name": "Barramundi Perak",
+      "tags": [
+        "Air asin ke air tawar",
+        "Pemangsa penyergapan",
+        "Timbangan cermin"
+      ],
+      "description": "Sama halnya di muara karang tropis dan billabong air tawar, ikan barramundi memancarkan sisik berwarna perak-perunggu dan menyerang dengan tegukan seperti vakum yang begitu cepat hingga menghasilkan ledakan yang terdengar di bawah air.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "60–150cm"
+        },
+        {
+          "label": "Berat",
+          "value": "Hingga 60kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Ikan belanak, udang dan kepiting sungai"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Indo-Pasifik Barat & Australia utara"
+        }
+      ],
+      "habitat": "Muara mangrove, terumbu pantai, dan sungai pasang surut.",
+      "caption": "Air raksa hidup di antara sungai dan karang.",
+      "featured": {
+        "headline": "Terlahir laki-laki, kemudian perempuan.",
+        "text": "Kebanyakan ikan barramundi berganti jenis kelamin setelah musim pemijahan pertamanya."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Saluran sensorik gurat sisi mengalir di setiap sisi, merasakan riak samar mangsa di air keruh."
+      }
+    },
+    "chameleon": {
+      "name": "Bunglon Panther",
+      "tags": [
+        "Kulit nanokristal",
+        "Mata menara 360°",
+        "Lidah balistik"
+      ],
+      "description": "Berasal dari hutan hujan Madagaskar, bunglon macan kumbang mengubah warna dengan menyetel kisi kristal guanin mikroskopis di kulitnya. Matanya berputar secara independen hingga keduanya mengunci serangga—lalu lidahnya menyerang dalam 0,07 detik.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "30–50cm"
+        },
+        {
+          "label": "Berat",
+          "value": "140–250 gram"
+        },
+        {
+          "label": "Diet",
+          "value": "Mantids, jangkrik dan serangga tongkat"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Madagaskar utara dan timur"
+        }
+      ],
+      "habitat": "Hutan hujan pesisir yang lembab dan tepi kanopi yang diterangi matahari.",
+      "caption": "Dua mata memandang ke dua arah, hingga keduanya sepakat.",
+      "featured": {
+        "headline": "Cermin di dalam kulitnya.",
+        "text": "Perubahan warna lebih menunjukkan suasana hati dan persaingan daripada kamuflase."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Ekor yang dapat memegang melingkar seperti pegas arloji untuk keseimbangan saat kaki depan meraih cabang berikutnya."
+      }
+    },
+    "flamingo": {
+      "name": "Flamingo Besar",
+      "tags": [
+        "Penyaring pengumpan",
+        "Merah muda karena diet",
+        "Sarang koloni"
+      ],
+      "description": "Flamingo yang lebih besar makan secara terbalik, menyapu paruhnya yang bengkok ke perairan dangkal yang asin untuk menyaring udang dan ganggang. Pigmen dalam makanan itulah yang membuat bulu mereka menjadi merah muda.",
+      "traits": [
+        {
+          "label": "Tinggi",
+          "value": "110–150cm"
+        },
+        {
+          "label": "Lebar sayap",
+          "value": "140–165 cm"
+        },
+        {
+          "label": "Diet",
+          "value": "Udang air asin, alga dan moluska"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Afrika, Eropa Selatan, Asia Selatan"
+        }
+      ],
+      "habitat": "Danau garam, laguna, dan muara.",
+      "caption": "Matahari terbenam yang belajar berdiri dengan satu kaki.",
+      "featured": {
+        "headline": "Diwarnai oleh makan malamnya.",
+        "text": "Tanpa udang yang kaya karotenoid, warna flamingo akan berubah menjadi putih."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Bulu terbang berwarna hitam tetap tersembunyi sampai sayapnya terbuka, lalu menyebar ke seluruh kawanan."
+      }
+    },
+    "parrot": {
+      "name": "Macaw Merah",
+      "tags": [
+        "Meniru vokal",
+        "Berumur panjang",
+        "Kawanan kanopi"
+      ],
+      "description": "Macaw merah bergerak berpasangan dan berkelompok kecil melintasi kanopi hutan hujan, memancarkan warna merah tua, kuning, dan biru di antara pohon-pohon yang sedang berbuah. Banyak yang hidup melewati usia 50 tahun dan kawin seumur hidup.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "80–90 cm (setengahnya adalah ekor)"
+        },
+        {
+          "label": "Berat",
+          "value": "0,9–1,5kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Buah-buahan, biji-bijian, kacang-kacangan dan tanah liat"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Amerika Tengah dan Selatan"
+        }
+      ],
+      "habitat": "Hutan hujan dataran rendah dan tepi sungai.",
+      "caption": "Kilatan api melintasi kanopi.",
+      "featured": {
+        "headline": "Tanah liat untuk sarapan.",
+        "text": "Tanah liat di tepi sungai menetralkan racun dalam benih hutan hujan yang masih mentah."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Paruhnya yang bengkok cukup kuat untuk memecahkan kacang Brazil, dan lidah dengan tulang di dalamnya untuk membalik bijinya."
+      }
+    },
+    "stork": {
+      "name": "Bangau Putih",
+      "tags": [
+        "Migran jarak jauh",
+        "Sarang atap",
+        "Termal melonjak"
+      ],
+      "description": "Setiap musim gugur, bangau putih menunggangi suhu panas yang meningkat dari Eropa ke Afrika, nyaris terbang sejauh 10.000 km. Di musim semi, mereka kembali ke sarang cerobong asap yang sama, beberapa telah digunakan selama berabad-abad.",
+      "traits": [
+        {
+          "label": "Tinggi",
+          "value": "100–115cm"
+        },
+        {
+          "label": "Lebar sayap",
+          "value": "155–215cm"
+        },
+        {
+          "label": "Diet",
+          "value": "Katak, serangga, ikan, dan tikus"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Eropa, Afrika, Asia Barat"
+        }
+      ],
+      "habitat": "Lahan basah terbuka, padang rumput, dan atap desa.",
+      "caption": "Sepuluh ribu kilometer dengan meminjam udara hangat.",
+      "featured": {
+        "headline": "Rumah bagi cerobong asap yang sama.",
+        "text": "Pasangan bersatu kembali di satu sarang, tahun demi tahun."
+      },
+      "closeup": {
+        "title": "Perincian Jarak Dekat",
+        "text": "Orang dewasa hampir tidak bersuara, jadi mereka saling menyapa dengan membunyikan paruh merahnya yang panjang."
+      }
+    },
+    "penguin": {
+      "name": "Kaisar Penguin",
+      "tags": [
+        "Peternak Antartika",
+        "Penyelam dalam",
+        "Penghangat kerumunan"
+      ],
+      "description": "Penguin kaisar berkembang biak selama musim dingin di Antartika, ketika penguin jantan menyeimbangkan satu telur di kaki mereka dan berpuasa sementara penguin betina mencari makan di laut. Kerumunan padat melindungi koloni dari angin katabatic, dan setiap burung pada akhirnya bergerak dari daerah yang dingin menuju pusat yang lebih hangat.",
+      "traits": [
+        {
+          "label": "Tinggi",
+          "value": "100–130cm"
+        },
+        {
+          "label": "Berat",
+          "value": "22–45kg"
+        },
+        {
+          "label": "Kedalaman",
+          "value": "Biasanya 200–500 m pada penyelaman dalam"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Lapisan es Antartika dan Samudra Selatan"
+        }
+      ],
+      "habitat": "Lautan es, lapisan es, dan lautan dingin di sekitarnya.",
+      "caption": "Sebutir telur tetap hangat di kaki seorang ayah.",
+      "featured": {
+        "headline": "Kota kehangatan bersama.",
+        "text": "Gerombolan tersebut selalu bergerak saat burung bergiliran antara bagian tengahnya yang terlindung dan tepiannya yang terbuka."
+      },
+      "closeup": {
+        "title": "Bulu seperti pakaian selam",
+        "text": "Bulu yang pendek dan padat memerangkap udara penyekat dan membentuk permukaan halus yang kedap air."
+      }
+    }
+  }
+}

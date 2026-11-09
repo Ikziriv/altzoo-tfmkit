@@ -1,0 +1,85 @@
+{
+  "app": {
+    "title": "Field Atlas: a living zoo",
+    "skip": "Skip to specimen"
+  },
+  "brand": {
+    "name": "Field & Abyss",
+    "tagline": "zoo & ocean atlas",
+    "home": "Field Atlas home"
+  },
+  "nav": {
+    "home": "Home",
+    "collections": "Collections",
+    "expandSidebar": "Expand sidebar",
+    "collapseSidebar": "Collapse sidebar",
+    "count_one": "{{count}} species",
+    "count_other": "{{count}} species"
+  },
+  "groups": {
+    "featured": "Featured",
+    "mammals": "Mammals",
+    "birds": "Birds",
+    "reptiles": "Reptiles",
+    "ocean": "Ocean & Reef",
+    "abyss": "Deep Sea",
+    "savanna": "Savanna & Steppe"
+  },
+  "featured": {
+    "eyebrow": "Featured species",
+    "lookCloser": "Look closer"
+  },
+  "rail": {
+    "count_one": "{{count}} species",
+    "count_other": "{{count}} species",
+    "cards": "Cards",
+    "rows": "Compact rows",
+    "layout": "Card layout",
+    "aria": "Species",
+    "empty": "No animals match “{{query}}”."
+  },
+  "panel": {
+    "keyTraits": "Key Traits",
+    "habitat": "Habitat",
+    "notes": "Specimen notes",
+    "credit": "3D “{{title}}” by <0>{{author}}</0>",
+    "expand": "Expand panel",
+    "collapse": "Collapse panel"
+  },
+  "search": {
+    "label": "Search species",
+    "placeholder": "Search species, habitats or traits…"
+  },
+  "stage": {
+    "aria": "3D viewer. Drag or use arrow keys to rotate, pinch, scroll or plus and minus to zoom, 0 to reset, H to hide the habitat.",
+    "loading": "Preparing specimen…",
+    "loadingHint": "Loading geometry, textures and motion.",
+    "loadError": "{{name}} could not load",
+    "loadErrorHint": "Choose another species from the collection.",
+    "exitDetail": "Exit close-up",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "fullscreen": "Toggle full screen",
+    "pauseMotion": "Pause animal motion",
+    "resumeMotion": "Resume animal motion",
+    "hideHabitat": "Hide habitat",
+    "showHabitat": "Show habitat",
+    "toNight": "Switch to night safari",
+    "toDay": "Switch to daylight",
+    "spinLeft": "Spin left 360 degrees",
+    "spinRight": "Spin right 360 degrees",
+    "resetView": "Reset view",
+    "toolbar": "View tools"
+  },
+  "habitats": {
+    "savanna": "East African Acacia Savanna",
+    "polar": "Antarctic Sea Ice & Pack Ice",
+    "forest": "Cloud & Lowland Rainforest",
+    "wetland": "Estuarine Lagoon & Reed Marsh",
+    "reef": "Sunlit Coral Lagoon & Reef Slope",
+    "abyss": "Bathyal Slope & Deep Pelagic Trench"
+  },
+  "language": {
+    "label": "Language"
+  }
+}

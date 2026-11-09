@@ -1,0 +1,32 @@
+3D Model Credits
+================
+
+CC0 (public domain) — no attribution required
+- fox.glb, horse.glb, flamingo.glb, parrot.glb, stork.glb, duck.glb
+  Quaternius — https://quaternius.com
+- whale.glb, manta.glb
+  Quaternius (Animated Fish Pack) — https://quaternius.com
+- fish.glb
+  See original source package
+
+CC-BY 3.0 — attribution required (via poly.pizza)
+- elephant.glb   "Elephant" by elkiotbear       https://poly.pizza/m/3AfO8NwcxD
+- giraffe.glb    "Giraffe" by Poly by Google    https://poly.pizza/m/0VkNrGSGXOO
+- chameleon.glb  "Spotted Gecko" by Jeff Larson https://poly.pizza/m/65Yj7059c2K
+- octopus.glb    "Octopus" by jeremy            https://poly.pizza/m/6KQsV8qo5E0
+- turtle.glb     "Turtle" by Poly by Google     https://poly.pizza/m/fklSEvGm1Q8
+- jellyfish.glb  "Jellyfish" by Poly by Google  https://poly.pizza/m/5PxIqPamrag
+- lion.glb       "Lion" by Poly by Google       https://poly.pizza/m/3XAJojWxSWz
+- tiger.glb      "Tiger" by Poly by Google      https://poly.pizza/m/5A3w06FXUup
+- penguin.glb    "Penguin" by Poly by Google    https://poly.pizza/m/fBXvsC6pe_V
+- crocodile.glb  "Crocodile" by Poly by Google  https://poly.pizza/m/2an6E2WjW3z
+
+Habitat dioramas (CC-BY 3.0, via poly.pizza)
+- env-acacia.glb  "Tree from the savanna" by hat          https://poly.pizza/m/uLxXsCfYb7
+- env-coral.glb   "underwater_enviro_coral" by God Appeasers https://poly.pizza/m/0CrDBiCnI5e
+- env-kelp.glb    "kelp" by M Smith Jonn                  https://poly.pizza/m/5ECC8rIOZJl
+- env-pond.glb    "Pond" by Poly by Google                https://poly.pizza/m/5rf3YuZfJAW
+
+Terrain textures (CC0)
+- snow_02_diff.jpg, snow_02_nor.jpg, snow_02_arm.jpg
+  "Snow 02" by Rob Tuytel / Poly Haven — https://polyhaven.com/a/snow_02

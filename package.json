@@ -1,0 +1,39 @@
+{
+  "name": "zoojelly",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test:habitat": "node scripts/check-habitat.mjs",
+    "thumbnails": "node scripts/generate-thumbnails.mjs",
+    "translate": "node scripts/translate-locales.mjs",
+    "deploy": "vite build && wrangler deploy --config dist/wrangler.json"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.17.10",
+    "gsap": "^3.12.5",
+    "i18next": "^27.0.1",
+    "i18next-browser-languagedetector": "^8.3.0",
+    "i18next-resources-to-backend": "^1.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^18.0.1",
+    "three": "^0.170.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.68.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.170.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "cf": "^1.0.0-beta.28",
+    "playwright": "1.56.0",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.3"
+  }
+}
