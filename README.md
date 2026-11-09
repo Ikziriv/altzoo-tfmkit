@@ -1,4 +1,4 @@
-# Zoojelly — Field Atlas: A Living Zoo
+# Alternatives to a Zoo — Field Atlas: A Living Zoo
 
 An interactive 3D zoo you can explore in the browser. Rotate, zoom, and meet
 animals up close — each species lives in a diorama built to match its real
