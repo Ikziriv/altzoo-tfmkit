@@ -42,6 +42,10 @@ function prepareMaterials(root: Group, species?: Species) {
       std.metalness = 0.02;
       std.roughness = isGelatinous ? 0.2 : isWet ? 0.38 : isFur ? 0.72 : 0.58;
       std.envMapIntensity = isWet ? 1.25 : 0.98;
+      if (std.name === 'Light') {
+        std.emissiveIntensity = 2.4;
+        std.roughness = 0.12;
+      }
       std.needsUpdate = true;
     }
   });

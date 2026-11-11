@@ -4,7 +4,7 @@
 CC0 (public domain) — no attribution required
 - fox.glb, horse.glb, flamingo.glb, parrot.glb, stork.glb, duck.glb
   Quaternius — https://quaternius.com
-- whale.glb, manta.glb
+- whale.glb, manta.glb, clownfish.glb, bluetang.glb, lionfish.glb, shark.glb, anglerfish.glb
   Quaternius (Animated Fish Pack) — https://quaternius.com
 - fish.glb
   See original source package
@@ -26,6 +26,7 @@ Habitat dioramas (CC-BY 3.0, via poly.pizza)
 - env-coral.glb   "underwater_enviro_coral" by God Appeasers https://poly.pizza/m/0CrDBiCnI5e
 - env-kelp.glb    "kelp" by M Smith Jonn                  https://poly.pizza/m/5ECC8rIOZJl
 - env-pond.glb    "Pond" by Poly by Google                https://poly.pizza/m/5rf3YuZfJAW
+- env-anemone.glb "Anemone" by Poly by Google             https://poly.pizza/m/eUZruaSm-9X
 
 Terrain textures (CC0)
 - snow_02_diff.jpg, snow_02_nor.jpg, snow_02_arm.jpg

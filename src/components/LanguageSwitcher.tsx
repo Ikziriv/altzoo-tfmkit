@@ -53,18 +53,17 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
         ref={btn}
         type="button"
         className={compact ? 'icon-btn lang-btn' : 'nav-item lang-btn'}
+        data-tooltip={`${t('language.label')}: ${current.label}`}
         title={t('language.label')}
         aria-haspopup="listbox"
         aria-expanded={open}
         onClick={toggle}
       >
-        <Icon name="globe" />
-        {!compact && (
-          <span className="nav-label">
-            {t('language.label')}
-            <small>{current.label}</small>
-          </span>
-        )}
+        <span className="nav-icon" aria-hidden="true">
+          <Icon name="globe" />
+        </span>
+        {!compact && <span className="nav-label">{current.label}</span>}
+        {!compact && <span className="lang-code">{current.code.toUpperCase()}</span>}
         {!compact && <Icon name="chevron" className="lang-caret" width={13} height={13} />}
       </button>
       {open && (

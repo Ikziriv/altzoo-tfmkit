@@ -1,7 +1,9 @@
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import {
+  AnimationMixer,
   BackSide,
+  Box3,
   BufferAttribute,
   BufferGeometry,
   Color,
@@ -11,6 +13,7 @@ import {
   InstancedBufferAttribute,
   InstancedMesh,
   LinearSRGBColorSpace,
+  LoopRepeat,
   Mesh,
   MeshBasicMaterial,
   MeshStandardMaterial,
@@ -26,7 +29,7 @@ import {
   Vector3,
 } from 'three';
 import { useGLTF } from '@react-three/drei';
-import { Box3 } from 'three';
+import { clone as cloneSkinned } from 'three/examples/jsm/utils/SkeletonUtils.js';
 import { fbm2, fbm3, rng, smoothstep } from './noise';
 import { HABITAT_SPECS, type HabitatId, type HabitatSpec } from './specs';
 import type { Theme } from '../../store';
@@ -694,24 +697,40 @@ function HabitatProps({ spec }: { spec: HabitatSpec }) {
     return norm;
   }, [scene]);
 
-  const clones = useMemo(
-    () =>
-      spec.props.map(() => {
-        const c = normalized.clone(true);
-        setWorldLayer(c);
-        return c;
-      }),
-    [normalized, spec.props],
-  );
+  const clones = useMemo(() => {
+    const reefPalette = ['#ff9b7a', '#e89cf5', '#ffd180', '#ff7b8f', '#7ce8d8'];
+    return spec.props.map((_, idx) => {
+      const c = normalized.clone(true);
+      if (spec.id === 'reef') {
+        const tint = new Color(reefPalette[idx % reefPalette.length]);
+        c.traverse((o) => {
+          const m = o as Mesh;
+          if (!m.isMesh) return;
+          m.material = Array.isArray(m.material) ? m.material.map((mat) => mat.clone()) : m.material.clone();
+          const mats = Array.isArray(m.material) ? m.material : [m.material];
+          for (const mat of mats) {
+            const std = mat as MeshStandardMaterial;
+            if (std.isMeshStandardMaterial) {
+              std.color.lerp(tint, 0.34);
+            }
+          }
+        });
+      }
+      setWorldLayer(c);
+      return c;
+    });
+  }, [normalized, spec.id, spec.props]);
 
   useEffect(() => () => {
-    normalized.traverse((o) => {
-      const mesh = o as Mesh;
-      if (!mesh.isMesh) return;
-      const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
-      mats.forEach((mat) => mat.dispose());
+    clones.forEach((c) => {
+      c.traverse((o) => {
+        const mesh = o as Mesh;
+        if (!mesh.isMesh) return;
+        const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+        mats.forEach((mat) => mat.dispose());
+      });
     });
-  }, [normalized]);
+  }, [clones]);
 
   if (spec.props.length === 0) return null;
 
@@ -731,6 +750,245 @@ function HabitatProps({ spec }: { spec: HabitatSpec }) {
           </group>
         );
       })}
+    </group>
+  );
+}
+
+/**
+ * Living Sea Zoo background ecosystem for marine biomes (`reef` & `abyss`):
+ * - Sea anemone clusters (`env-anemone.glb`) swaying on the reef floor
+ * - Skeletal-animated background fish schools (`clownfish.glb`, `bluetang.glb`, `anglerfish.glb`)
+ *   swimming along curved 3D reef paths around the coral heads and anemones.
+ */
+function MarineLife({
+  spec,
+  timeRef,
+  reducedMotion,
+}: {
+  spec: HabitatSpec;
+  timeRef: React.MutableRefObject<number>;
+  reducedMotion: boolean;
+}) {
+  const anemoneGltf = useGLTF('/models/env-anemone.glb');
+  const clownGltf = useGLTF('/models/clownfish.glb');
+  const tangGltf = useGLTF('/models/bluetang.glb');
+  const anglerGltf = useGLTF('/models/anglerfish.glb');
+
+  const anemoneSpots = useMemo(
+    () =>
+      spec.id === 'reef'
+        ? [
+          { x: -0.74, z: -0.78, s: 0.24, ry: 0.4, tint: '#f43f5e', tip: '#2dd4bf' },
+          { x: 0.76, z: -0.84, s: 0.22, ry: -1.1, tint: '#d946ef', tip: '#fde047' },
+          { x: -0.32, z: -1.24, s: 0.28, ry: 1.8, tint: '#fb7185', tip: '#5eead4' },
+          { x: 0.44, z: -1.32, s: 0.25, ry: -0.5, tint: '#a855f7', tip: '#f472b6' },
+        ]
+        : [
+          { x: -0.68, z: -0.82, s: 0.22, ry: 0.6, tint: '#0284c7', tip: '#38bdf8' },
+          { x: 0.72, z: -0.88, s: 0.21, ry: -1.3, tint: '#4f46e5', tip: '#67e8f9' },
+          { x: -0.22, z: -1.35, s: 0.25, ry: 2.1, tint: '#0ea5e9', tip: '#22d3ee' },
+        ],
+    [spec.id],
+  );
+
+  const anemones = useMemo(() => {
+    const base = anemoneGltf.scene.clone(true) as Group;
+    const box = new Box3().setFromObject(base);
+    const size = box.getSize(new Vector3());
+    const center = box.getCenter(new Vector3());
+    const maxDim = Math.max(size.x, size.y, size.z) || 1;
+    base.position.set(-center.x, -box.min.y, -center.z);
+    const norm = new Group();
+    norm.scale.setScalar(1 / maxDim);
+    norm.add(base);
+
+    return anemoneSpots.map((spot) => {
+      const clone = norm.clone(true);
+      const bodyCol = new Color(spot.tint);
+      const tipCol = new Color(spot.tip);
+      clone.traverse((o) => {
+        const m = o as Mesh;
+        if (!m.isMesh) return;
+        m.frustumCulled = false;
+        m.castShadow = true;
+        m.receiveShadow = true;
+        m.layers.set(WORLD_LAYER);
+        m.material = Array.isArray(m.material) ? m.material.map((mat) => mat.clone()) : m.material.clone();
+        const mats = Array.isArray(m.material) ? m.material : [m.material];
+        for (const mat of mats) {
+          const std = mat as MeshStandardMaterial;
+          if (!std.isMeshStandardMaterial) continue;
+          const isTip = std.name === 'lambert2SG';
+          std.color.copy(isTip ? tipCol : bodyCol);
+          std.roughness = 0.45;
+          std.metalness = 0.04;
+          if (spec.id === 'abyss' && isTip) {
+            std.emissive.copy(tipCol);
+            std.emissiveIntensity = 0.65;
+          }
+        }
+      });
+      setWorldLayer(clone);
+      return clone;
+    });
+  }, [anemoneGltf.scene, anemoneSpots, spec.id]);
+
+  const schoolSpecs = useMemo(
+    () =>
+      spec.id === 'reef'
+        ? [
+          // Pair of clownfish darting around left host anemone & coral
+          { kind: 'clown' as const, cx: -0.68, cy: -0.14, cz: -0.88, rx: 0.28, ry: 0.06, rz: 0.18, speed: 0.72, phase: 0.2, scale: 0.145 },
+          { kind: 'clown' as const, cx: -0.58, cy: -0.06, cz: -0.96, rx: 0.24, ry: 0.05, rz: 0.16, speed: 0.82, phase: 2.1, scale: 0.125 },
+          // Pair of clownfish around right host anemone & coral
+          { kind: 'clown' as const, cx: 0.68, cy: -0.12, cz: -0.92, rx: 0.26, ry: 0.06, rz: 0.18, speed: 0.76, phase: 1.4, scale: 0.14 },
+          { kind: 'clown' as const, cx: 0.52, cy: -0.02, cz: -1.12, rx: 0.32, ry: 0.07, rz: 0.22, speed: 0.68, phase: 4.0, scale: 0.13 },
+          // Schooling Regal Blue Tangs cruising mid-water reef channel
+          { kind: 'tang' as const, cx: -0.18, cy: 0.18, cz: -1.22, rx: 0.68, ry: 0.08, rz: 0.24, speed: 0.56, phase: 0.8, scale: 0.165 },
+          { kind: 'tang' as const, cx: 0.22, cy: 0.26, cz: -1.38, rx: 0.74, ry: 0.09, rz: 0.26, speed: 0.52, phase: 3.5, scale: 0.155 },
+        ]
+        : [
+          // Deep-sea anglerfish & bioluminescent bathyal cruisers
+          { kind: 'angler' as const, cx: -0.58, cy: 0.06, cz: -1.18, rx: 0.42, ry: 0.07, rz: 0.2, speed: 0.42, phase: 0.5, scale: 0.16 },
+          { kind: 'angler' as const, cx: 0.62, cy: 0.16, cz: -1.35, rx: 0.46, ry: 0.08, rz: 0.22, speed: 0.38, phase: 2.9, scale: 0.15 },
+          { kind: 'tang' as const, cx: 0.05, cy: 0.24, cz: -1.48, rx: 0.62, ry: 0.07, rz: 0.22, speed: 0.48, phase: 1.7, scale: 0.14 },
+        ],
+    [spec.id],
+  );
+
+  const swimmers = useMemo(() => {
+    return schoolSpecs.map((s) => {
+      const src = s.kind === 'clown' ? clownGltf : s.kind === 'tang' ? tangGltf : anglerGltf;
+      const cloned = cloneSkinned(src.scene) as Group;
+      cloned.traverse((o) => {
+        const m = o as Mesh;
+        if (!m.isMesh) return;
+        m.frustumCulled = false;
+        m.castShadow = true;
+        m.receiveShadow = true;
+        m.layers.set(WORLD_LAYER);
+        m.material = Array.isArray(m.material) ? m.material.map((mat) => mat.clone()) : m.material.clone();
+        const mats = Array.isArray(m.material) ? m.material : [m.material];
+        for (const mat of mats) {
+          const std = mat as MeshStandardMaterial;
+          if (!std.isMeshStandardMaterial) continue;
+          std.roughness = 0.36;
+          std.metalness = 0.02;
+          if (std.name === 'Light') {
+            std.emissive = new Color('#5ef2ff');
+            std.emissiveIntensity = 2.5;
+          } else if (spec.id === 'abyss' && s.kind === 'tang') {
+            std.color.lerp(new Color('#38bdf8'), 0.45);
+            std.emissive = new Color('#0ea5e9');
+            std.emissiveIntensity = 0.35;
+          }
+        }
+      });
+
+      const mixer = new AnimationMixer(cloned);
+      const clip =
+        src.animations.find((a) => a.name.includes('Swimming_Normal')) ||
+        src.animations[0] ||
+        null;
+      if (clip) {
+        const action = mixer.clipAction(clip);
+        action.setLoop(LoopRepeat, Infinity);
+        action.timeScale = 0.95 + (s.phase % 0.35);
+        action.play();
+        mixer.update(s.phase * 0.3);
+      }
+      cloned.updateMatrixWorld(true);
+
+      const box = new Box3().setFromObject(cloned);
+      const size = box.getSize(new Vector3());
+      const center = box.getCenter(new Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z) || 1;
+      cloned.position.sub(center);
+
+      const norm = new Group();
+      norm.scale.setScalar(s.scale / maxDim);
+      norm.add(cloned);
+
+      const holder = new Group();
+      // Compute initial pose at t = 0 so initial render is already positioned in reef space
+      const theta0 = s.phase;
+      const x0 = s.cx + Math.sin(theta0) * s.rx;
+      const y0 = s.cy + Math.sin(theta0 * 2 + s.phase) * s.ry;
+      const z0 = s.cz + Math.cos(theta0) * s.rz;
+      const vx0 = Math.cos(theta0) * s.rx;
+      const vz0 = -Math.sin(theta0) * s.rz;
+      holder.position.set(x0, y0, z0);
+      holder.rotation.y = Math.atan2(vx0, vz0);
+      holder.add(norm);
+      setWorldLayer(holder);
+
+      return { holder, mixer, spec: s };
+    });
+  }, [anglerGltf, clownGltf, schoolSpecs, spec.id, tangGltf]);
+
+  const anemoneRefs = useRef<(Group | null)[]>([]);
+
+  useEffect(() => {
+    return () => {
+      swimmers.forEach((sw) => sw.mixer.stopAllAction());
+    };
+  }, [swimmers]);
+
+  useFrame((_, rawDt) => {
+    if (reducedMotion) return;
+    const dt = Math.min(rawDt, 1 / 20);
+    const t = timeRef.current;
+
+    for (let i = 0; i < anemoneSpots.length; i++) {
+      const g = anemoneRefs.current[i];
+      if (!g) continue;
+      const sp = anemoneSpots[i];
+      g.rotation.z = Math.sin(t * 1.4 + i * 1.3) * 0.06;
+      g.rotation.x = Math.cos(t * 1.1 + i * 0.9) * 0.05;
+      g.rotation.y = sp.ry + Math.sin(t * 0.7 + i) * 0.04;
+    }
+
+    for (const sw of swimmers) {
+      sw.mixer.update(dt);
+      const s = sw.spec;
+      const theta = t * s.speed + s.phase;
+      const x = s.cx + Math.sin(theta) * s.rx;
+      const y = s.cy + Math.sin(theta * 2 + s.phase) * s.ry;
+      const z = s.cz + Math.cos(theta) * s.rz;
+
+      const vx = Math.cos(theta) * s.rx * s.speed;
+      const vy = Math.cos(theta * 2 + s.phase) * 2 * s.ry * s.speed;
+      const vz = -Math.sin(theta) * s.rz * s.speed;
+
+      sw.holder.position.set(x, y, z);
+      sw.holder.rotation.y = Math.atan2(vx, vz);
+      sw.holder.rotation.x = -vy * 0.45;
+      sw.holder.rotation.z = Math.sin(theta) * 0.08;
+    }
+  });
+
+  return (
+    <group name="marine-life" onUpdate={setWorldLayer}>
+      {anemoneSpots.map((sp, i) => {
+        const y = sampleTerrainY(spec, sp.x, sp.z) - 0.025;
+        return (
+          <group
+            key={`anemone-${i}`}
+            ref={(el) => {
+              anemoneRefs.current[i] = el;
+            }}
+            position={[sp.x, y, sp.z]}
+            rotation={[0, sp.ry, 0]}
+            scale={sp.s}
+            onUpdate={setWorldLayer}
+          >
+            <primitive object={anemones[i]} />
+          </group>
+        );
+      })}
+      {swimmers.map((sw, i) => (
+        <primitive key={`swimmer-${i}`} object={sw.holder} />
+      ))}
     </group>
   );
 }
@@ -920,6 +1178,14 @@ export function Biome({
 
       <HabitatProps spec={spec} />
 
+      {spec.marine && (
+        <MarineLife
+          spec={spec}
+          timeRef={timeRef}
+          reducedMotion={reducedMotion}
+        />
+      )}
+
       {spec.boulders.map((b, i) => {
         const bottom = boulderGeos[i].boundingBox?.min.y ?? -0.55;
         const y = sampleTerrainY(spec, b.x, b.z) - bottom * b.s[1] - 0.035;
@@ -947,3 +1213,8 @@ export function Biome({
     </group>
   );
 }
+
+useGLTF.preload('/models/env-anemone.glb');
+useGLTF.preload('/models/clownfish.glb');
+useGLTF.preload('/models/bluetang.glb');
+useGLTF.preload('/models/anglerfish.glb');

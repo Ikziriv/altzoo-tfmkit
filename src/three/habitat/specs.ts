@@ -419,9 +419,11 @@ export const HABITAT_SPECS: Record<HabitatId, HabitatSpec> = {
     floraHeight: 0.21,
     propUrl: '/models/env-coral.glb',
     props: [
-      { x: -0.95, z: -1.25, ry: 0.35, s: 1.08, yOff: 0.04 },
-      { x: 1.02, z: -1.35, ry: -0.65, s: 0.9, yOff: 0.04 },
-      { x: 0.08, z: -1.95, ry: 1.7, s: 1.18, yOff: 0.1 },
+      { x: -0.95, z: -1.22, ry: 0.35, s: 1.12, yOff: 0.04 },
+      { x: 1.02, z: -1.32, ry: -0.65, s: 0.96, yOff: 0.04 },
+      { x: 0.08, z: -1.92, ry: 1.7, s: 1.22, yOff: 0.1 },
+      { x: -1.45, z: -1.68, ry: 2.1, s: 0.88, yOff: 0.06 },
+      { x: 1.48, z: -1.75, ry: -1.8, s: 0.92, yOff: 0.06 },
     ],
     boulders: [
       { x: -1.05, z: -0.55, s: [0.3, 0.22, 0.26], ry: 0.5 },

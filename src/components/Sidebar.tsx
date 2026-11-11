@@ -47,10 +47,7 @@ export function Sidebar() {
       </div>
 
       <nav className="nav" aria-label={t('nav.collections')}>
-        <button className="nav-item" title={t('nav.home')} onClick={() => setGroup('featured')}>
-          <Icon name="home" />
-          <span className="nav-label">{t('nav.home')}</span>
-        </button>
+        <p className="nav-section" aria-hidden="true">{t('nav.collections')}</p>
         {GROUPS.map((g) => {
           const count =
             g.id === 'featured' ? SPECIES.length : SPECIES.filter((s) => s.groups.includes(g.id as GroupId)).length;
@@ -58,31 +55,48 @@ export function Sidebar() {
             <button
               key={g.id}
               className="nav-item"
+              data-tooltip={`${t(`groups.${g.id}`)} (${count})`}
               title={t(`groups.${g.id}`)}
               aria-pressed={group === g.id}
               onClick={() => setGroup(g.id)}
             >
-              <Icon name={GROUP_ICONS[g.id]} />
-              <span className="nav-label">
-                {t(`groups.${g.id}`)}
-                {g.id !== 'featured' && <small>{t('nav.count', { count })}</small>}
+              <span className="nav-icon" aria-hidden="true">
+                <Icon name={GROUP_ICONS[g.id]} />
+              </span>
+              <span className="nav-label">{t(`groups.${g.id}`)}</span>
+              <span className="nav-badge" aria-label={t('nav.count', { count })}>
+                {count}
               </span>
             </button>
           );
         })}
       </nav>
 
-      <article className="featured" key={`${active.id}-${active.name}`}>
-        <p className="eyebrow">{t('featured.eyebrow')}</p>
-        <img className="featured-thumb" src={thumbnailUrl(active.id)} alt="" width={160} height={107} />
-        <h2>{active.featured.headline}</h2>
-        <p>{active.featured.text}</p>
-        <button className="link" onClick={() => { setDetail(true); focus(active.closeup); }}>
-          {t('featured.lookCloser')} <Icon name="arrow" width={14} height={14} />
-        </button>
-      </article>
+      <div className="sidebar-foot">
+        <article className="featured" key={`${active.id}-${active.name}`}>
+          <div className="featured-head">
+            <p className="eyebrow">{t('featured.eyebrow')}</p>
+            <img className="featured-thumb" src={thumbnailUrl(active.id)} alt="" width={68} height={46} />
+          </div>
+          <h2>{active.featured.headline}</h2>
+          <p className="featured-copy">{active.featured.text}</p>
+          <button className="link" onClick={() => { setDetail(true); focus(active.closeup); }}>
+            {t('featured.lookCloser')} <Icon name="arrow" width={14} height={14} />
+          </button>
+        </article>
 
-      <LanguageSwitcher />
+        <button
+          type="button"
+          className="featured-mini"
+          data-tooltip={`${active.name} — ${t('featured.lookCloser')}`}
+          title={`${active.name} — ${t('featured.lookCloser')}`}
+          onClick={() => { setDetail(true); focus(active.closeup); }}
+        >
+          <img src={thumbnailUrl(active.id)} alt={active.name} width={36} height={36} />
+        </button>
+
+        <LanguageSwitcher />
+      </div>
     </aside>
   );
 }

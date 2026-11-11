@@ -783,6 +783,191 @@
         "title": "Bulu seperti pakaian selam",
         "text": "Bulu yang pendek dan padat memerangkap udara penyekat dan membentuk permukaan halus yang kedap air."
       }
+    },
+    "clownfish": {
+      "name": "Ikan Badut Ocellaris",
+      "tags": [
+        "Simbion anemon",
+        "Perisai lendir",
+        "Ikon terumbu karang"
+      ],
+      "description": "Terbungkus warna oranye keprok dan tiga pita putih berbingkai hitam, ikan badut ocellaris hidup bersarang di antara tentakel anemon laut yang menyengat. Lapisan lendir khusus berbahan dasar gula mencegah anemon menembakkan nematosistanya, sehingga mengubah perangkap mematikan menjadi benteng.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "7–11cm"
+        },
+        {
+          "label": "Berat",
+          "value": "180–250 gram"
+        },
+        {
+          "label": "Diet",
+          "value": "Zooplankton, kopepoda, dan alga karang"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Indo-Pasifik & Great Barrier Reef"
+        }
+      ],
+      "habitat": "Laguna karang dangkal yang diterangi matahari dan menjadi tempat tinggal anemon laut.",
+      "caption": "Aman di dalam hutan tentakel yang menyengat.",
+      "featured": {
+        "headline": "Sebuah benteng yang menyengat.",
+        "text": "Ikan badut menyukai air melalui anemon inangnya di malam hari dan mengejar ikan kupu-kupu di siang hari."
+      },
+      "closeup": {
+        "title": "Tiga pita dicat",
+        "text": "Setiap batang putih diberi garis pigmen hitam legam, membantu ikan karang mengenali spesies dan peringkat sosial."
+      }
+    },
+    "bluetang": {
+      "name": "Tang Biru Agung",
+      "tags": [
+        "Penggembala karang",
+        "Pisau bedah ekor",
+        "Kobalt & lemon"
+      ],
+      "description": "Berkilau biru kobalt elektrik dengan garis hitam palet pelukis dan ekor kuning lemon, tang biru anggun berpatroli di kepala karang yang menyapu gelombang di sekolah-sekolah yang ramai. Dengan terus-menerus memakan alga berserabut yang tumbuh cepat, bau busuk mencegah polip karang tertahan.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "20–31 cm"
+        },
+        {
+          "label": "Berat",
+          "value": "500–600 gram"
+        },
+        {
+          "label": "Diet",
+          "value": "Alga rumput laut dan zooplankton"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Terumbu karang Indo-Pasifik"
+        }
+      ],
+      "habitat": "Lereng terumbu luar, kepala karang kembang kol, dan saluran jernih.",
+      "caption": "Sapuan kuas kobalt menjaga taman karang tetap bersih.",
+      "featured": {
+        "headline": "Pisau bedah ahli bedah di bagian ekor.",
+        "text": "Tulang belakang lipat yang setajam silet di setiap sisi pangkal ekor menghalangi predator karang."
+      },
+      "closeup": {
+        "title": "Tulang belakang ahli bedah",
+        "text": "Terletak di alur di depan sirip ekor kuning terdapat tulang ereksi berbisa yang tajam seperti lanset."
+      }
+    },
+    "lionfish": {
+      "name": "Ikan Singa Merah",
+      "tags": [
+        "Duri punggung yang berbisa",
+        "Penggembala sirip bulu",
+        "Pemburu senja"
+      ],
+      "description": "Tertahan hampir tak bergerak di samping karang yang menjorok, lionfish merah membentangkan sirip dada yang mengepul bagaikan kipas berwarna merah tua dan gading. Saat senja, ia menyudutkan ikan karang kecil ke karang dengan siripnya yang terentang sebelum menyerang dalam sekali tegukan.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "30–38 cm"
+        },
+        {
+          "label": "Berat",
+          "value": "Hingga 1,2kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Ikan damselfish, cardinalfish, dan udang pembersih"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Terumbu karang Indo-Pasifik & Atlantik barat"
+        }
+      ],
+      "habitat": "Dinding karang, puncak laguna, dan gua karang yang teduh.",
+      "caption": "Sirip pita sutra yang menggiring mangsa ke dalam bayang-bayang.",
+      "featured": {
+        "headline": "Delapan belas duri setajam jarum.",
+        "text": "Duri punggung, panggul, dan dubur membawa racun pertahanan, ditandai dengan garis-garis merah marun dan krem ​​​​yang tebal."
+      },
+      "closeup": {
+        "title": "Sinar sirip berbisa",
+        "text": "Duri punggung yang tinggi berlekuk di sepanjang tubuhnya, mengeluarkan racun hanya ketika predator menekan ujungnya."
+      }
+    },
+    "shark": {
+      "name": "Hiu Karang Abu-abu",
+      "tags": [
+        "Moncong elektro-reseptor",
+        "Kapal penjelajah pengantaran",
+        "Puncak yang diarsir berlawanan"
+      ],
+      "description": "Dibangun seperti torpedo batu perunggu dengan ekor lebar bermata hitam, hiu karang abu-abu berpatroli di dinding luar yang curam tempat laguna karang bermuara ke laut terbuka. Pori-pori di moncongnya mendeteksi detak jantung bioelektrik samar ikan yang tersembunyi di bawah pasir.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "1,8–2,5 m"
+        },
+        {
+          "label": "Berat",
+          "value": "30–35kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Surgeonfish, cumi-cumi, gurita dan ikan karang"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Terumbu karang dan atol Indo-Pasifik"
+        }
+      ],
+      "habitat": "Lepasnya terumbu bagian luar, jalur pasang surut yang kuat, dan saluran laguna.",
+      "caption": "Siluet tak kenal lelah berpatroli di tepian biru.",
+      "featured": {
+        "headline": "Indra keenam untuk listrik.",
+        "text": "Ampullae Lorenzini di bagian bawah moncong merasakan medan listrik hingga sepersejuta volt."
+      },
+      "closeup": {
+        "title": "Dentikel dermal hidrodinamik",
+        "text": "Sisik mikroskopis seperti gigi menyalurkan air dengan lancar ke seluruh tubuh, membungkam turbulensi saat meluncur."
+      }
+    },
+    "anglerfish": {
+      "name": "Ikan Pemancing Setan Laut Hitam",
+      "tags": [
+        "Umpan bercahaya",
+        "Zona tengah malam",
+        "Taring yang bisa dilipat ke dalam"
+      ],
+      "description": "Terapung dalam kegelapan pekat dua kilometer di bawah ombak, setan laut hitam betina itu menggantungkan lentera bercahaya—esca—tepat di atas rahangnya yang besar. Bakteri simbiosis di dalam bohlam berdenyut dengan cahaya cyan yang dingin, menarik mangsa yang penasaran ke dalam jangkauan gigi seperti kaca yang berengsel ke dalam.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "Hingga 18 cm (wanita)"
+        },
+        {
+          "label": "Kedalaman",
+          "value": "300–3.000 m"
+        },
+        {
+          "label": "Diet",
+          "value": "Ikan lentera, bristlemouth, dan cumi-cumi dalam"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Perairan batipelagis di seluruh samudra"
+        }
+      ],
+      "habitat": "Kolom air batipelagis dan abisal tanpa matahari.",
+      "caption": "Lentera cyan dingin mengambang di kegelapan abadi.",
+      "featured": {
+        "headline": "Pancing yang tumbuh dari tulang belakang.",
+        "text": "Tulang belakang punggung pertama yang dimodifikasi mengarah ke depan melewati mulut, diakhiri dengan daya tarik bakteri yang bersinar."
+      },
+      "closeup": {
+        "title": "Esca yang bersinar",
+        "text": "Ikan dapat membuka atau menyempitkan penutup pigmen di sekitar bola lampu esca untuk menyalakan atau meredupkan suar bercahaya."
+      }
     }
   }
 }
