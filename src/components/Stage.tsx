@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { byId } from '../data/species';
 import { useSpecies } from '../data/localize';
 import { thumbnailUrl } from '../data/thumbnails';
 import { useAtlas } from '../store';
@@ -37,6 +38,13 @@ export function Stage() {
   const toggleMotion = useAtlas((s) => s.toggleMotion);
   const habitatHidden = useAtlas((s) => s.habitatHidden);
   const toggleHabitat = useAtlas((s) => s.toggleHabitat);
+  const zooMode = useAtlas((s) => s.zooMode);
+  const zooHabitat = useAtlas((s) => s.zooHabitat);
+  const zooSelectedIds = useAtlas((s) => s.zooSelectedIds);
+  const zooPlaying = useAtlas((s) => s.zooPlaying);
+  const toggleZooPlaying = useAtlas((s) => s.toggleZooPlaying);
+  const toggleZooSpecies = useAtlas((s) => s.toggleZooSpecies);
+  const displayedHabitat = zooMode ? zooHabitat : (active.model.habitat ?? 'savanna');
 
   const beginZoom = useCallback(
     (factor: number, immediate = false) => {
@@ -200,7 +208,7 @@ export function Stage() {
       id="stage"
       ref={ref}
       className="stage"
-      data-habitat={active.model.habitat ?? 'savanna'}
+      data-habitat={displayedHabitat}
       tabIndex={0}
       onKeyDown={onKey}
       aria-label={t('stage.aria')}
@@ -208,10 +216,10 @@ export function Stage() {
       <div className="vitrine-frame" aria-hidden="true">
         <span className="vitrine-badge">
           <span className="vitrine-dot" />
-          {t(`habitats.${active.model.habitat ?? 'savanna'}`)}
+          {t(`habitats.${displayedHabitat}`)}
         </span>
       </div>
-      {(!modelReady || modelError) && (
+      {!zooMode && (!modelReady || modelError) && (
         <div className={modelError ? 'model-status is-error' : 'model-status'} role={modelError ? 'alert' : 'status'}>
           <img src={thumbnailUrl(active.id)} alt="" width={140} height={90} />
           <div>
@@ -265,17 +273,54 @@ export function Stage() {
         </button>
       </div>
 
-      <div className="spin-pill">
-        <button onClick={() => spin(-1)} aria-label={t('stage.spinLeft')}>
-          <Icon name="rotL" width={15} height={15} />
-        </button>
-        <button className="spin-label" onClick={handleReset} aria-label={t('stage.resetView')}>
-          360°
-        </button>
-        <button onClick={() => spin(1)} aria-label={t('stage.spinRight')}>
-          <Icon name="rotR" width={15} height={15} />
-        </button>
-      </div>
+      {zooMode ? (
+        <div className="zoo-bar">
+          <button
+            type="button"
+            className={`zoo-play-btn${zooPlaying ? ' is-playing' : ''}`}
+            onClick={toggleZooPlaying}
+            disabled={zooSelectedIds.length === 0}
+          >
+            <Icon name={zooPlaying ? 'pause' : 'play'} width={15} height={15} />
+            <span>{zooPlaying ? t('zoo.pause') : t('zoo.play')}</span>
+          </button>
+          <div className="zoo-chips" role="list" aria-label={t('zoo.activeAnimals')}>
+            {zooSelectedIds.length === 0 ? (
+              <span className="zoo-empty-hint">{t('zoo.emptyHint')}</span>
+            ) : (
+              zooSelectedIds.map((id) => {
+                const sp = byId(id);
+                const label = t(`species.${id}.name`, { defaultValue: sp.name });
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    className="zoo-chip"
+                    onClick={() => toggleZooSpecies(id)}
+                    title={t('zoo.removeAnimal', { name: label })}
+                  >
+                    <img src={thumbnailUrl(id)} alt="" width={22} height={22} />
+                    <span>{label}</span>
+                    <Icon name="close" width={11} height={11} />
+                  </button>
+                );
+              })
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className="spin-pill">
+          <button onClick={() => spin(-1)} aria-label={t('stage.spinLeft')}>
+            <Icon name="rotL" width={15} height={15} />
+          </button>
+          <button className="spin-label" onClick={handleReset} aria-label={t('stage.resetView')}>
+            360°
+          </button>
+          <button onClick={() => spin(1)} aria-label={t('stage.spinRight')}>
+            <Icon name="rotR" width={15} height={15} />
+          </button>
+        </div>
+      )}
     </section>
   );
 }

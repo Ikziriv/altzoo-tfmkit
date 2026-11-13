@@ -968,6 +968,251 @@
         "title": "Esca yang bersinar",
         "text": "Ikan dapat membuka atau menyempitkan penutup pigmen di sekitar bola lampu esca untuk menyalakan atau meredupkan suar bercahaya."
       }
+    },
+    "wolf": {
+      "name": "Serigala Abu-abu",
+      "tags": [
+        "Paket ahli strategi",
+        "Pengendara ketahanan",
+        "Pelolong harmonis"
+      ],
+      "description": "Dibangun untuk ketahanan tanpa henti melintasi hutan boreal dan pegunungan, serigala abu-abu melakukan perjalanan hingga lima puluh kilometer dalam satu malam dengan berlari tanpa susah payah. Kelompok ini mengoordinasikan perburuan dengan isyarat telinga, ekor, dan vokal yang halus, dan lolongan paduan suara mereka terdengar sejauh sepuluh kilometer melalui udara hutan yang tenang.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "105–160 cm, ditambah ekor"
+        },
+        {
+          "label": "Berat",
+          "value": "30–60kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Rusa, rusa, berang-berang, dan kelinci"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Amerika Utara, Eropa dan Asia utara"
+        }
+      ],
+      "habitat": "Hutan beriklim sedang dan boreal, lembah pegunungan dan tundra.",
+      "caption": "Serangkaian suara melintasi barisan kayu.",
+      "featured": {
+        "headline": "Dibangun untuk perjalanan panjang.",
+        "text": "Cakarnya yang sempit dan tulang belakangnya yang kenyal memungkinkan serigala menempuh kecepatan 8 km/jam selama berjam-jam."
+      },
+      "closeup": {
+        "title": "Aroma dan pendengaran",
+        "text": "Hingga 200 juta sel penciuman—empat puluh kali lebih banyak daripada sel manusia—membaca angin hutan seperti peta."
+      }
+    },
+    "stag": {
+      "name": "Rusa Rusa Merah",
+      "tags": [
+        "Tanduk beludru",
+        "Peniup terompet musim gugur",
+        "Penggembala hutan"
+      ],
+      "description": "Setiap musim semi, rusa merah menumbuhkan kembali mahkota tanduk tulang yang bercabang hingga dua sentimeter sehari—jaringan tulang dengan pertumbuhan tercepat di dunia hewan. Pada musim gugur, beludru terkelupas dan rusa jantan menggemakan suara gemuruh melintasi pembukaan hutan yang berkabut.",
+      "traits": [
+        {
+          "label": "Tinggi",
+          "value": "110–140 cm di bahu"
+        },
+        {
+          "label": "Berat",
+          "value": "160–240kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Rumput, heather, biji ek dan kulit kayu"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Eropa, Kaukasus dan Asia Barat"
+        }
+      ],
+      "habitat": "Hutan gugur, hutan rawa, dan dataran tinggi.",
+      "caption": "Mahkota tulang tumbuh kembali setiap musim semi.",
+      "featured": {
+        "headline": "Tulang yang tumbuh setiap tahun.",
+        "text": "Gudang setelah musim dingin dan dibangun kembali di bawah beludru kaya darah hanya dalam empat bulan."
+      },
+      "closeup": {
+        "title": "Rak bercabang",
+        "text": "Rusa jantan yang lebih tua mengembangkan dua belas poin atau lebih—dikenal sebagai rusa jantan kerajaan—digunakan dalam ritual pertarungan mengunci tanduk."
+      }
+    },
+    "zebra": {
+      "name": "Zebra Dataran",
+      "tags": [
+        "Garis-garis yang mempesona",
+        "Kawanan yang bermigrasi",
+        "Penjaga sabana"
+      ],
+      "description": "Tidak ada dua zebra dataran yang memiliki pola garis yang sama—setiap bulunya bersifat individual seperti sidik jari. Bergerak bersama dalam kawanan yang berkilauan, garis-garis kontras tinggi mereka membingungkan lalat tsetse yang sedang menggigit dan mengaburkan garis-garis individu ketika predator mengejar.",
+      "traits": [
+        {
+          "label": "Tinggi",
+          "value": "125–145 cm di bahu"
+        },
+        {
+          "label": "Berat",
+          "value": "220–320kg"
+        },
+        {
+          "label": "Diet",
+          "value": "Rerumputan dan pucuk sabana yang kasar"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Afrika Timur dan Selatan"
+        }
+      ],
+      "habitat": "Padang rumput terbuka, sabana akasia, dan dataran banjir musiman.",
+      "caption": "Sebuah barcode hidup bergerak melintasi rumput.",
+      "featured": {
+        "headline": "Garis-garis yang membingungkan lalat.",
+        "text": "Eksperimen menunjukkan lalat yang menggigit kesulitan mendarat dengan rapi di garis hitam-putih yang tebal."
+      },
+      "closeup": {
+        "title": "Kamuflase yang mempesona",
+        "text": "Garis leher vertikal terbagi menjadi pita diagonal lebar di sisi tubuh, membantu anak kuda mengenali induknya."
+      }
+    },
+    "panda": {
+      "name": "Panda Raksasa",
+      "tags": [
+        "Spesialis bambu",
+        "Jempol palsu",
+        "Beruang hutan awan"
+      ],
+      "description": "Dilengkapi dengan saluran pencernaan karnivora namun hampir seluruhnya hidup dari bambu, panda raksasa menghabiskan hingga dua belas jam sehari untuk mengupas batang-batang keras. Tulang pergelangan tangan yang membesar berfungsi seperti ibu jari keenam yang berlawanan untuk menggenggam tunas ramping dengan kelembutan yang mengejutkan.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "120–180cm"
+        },
+        {
+          "label": "Berat",
+          "value": "70–125kg"
+        },
+        {
+          "label": "Diet",
+          "value": "99% rebung, batang dan daun"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Pegunungan Sichuan, Shaanxi & Gansu, Cina"
+        }
+      ],
+      "habitat": "Bambu beriklim sedang berkabut dan hutan pegunungan jenis konifera.",
+      "caption": "Kesabaran yang tenang dalam kabut bambu.",
+      "featured": {
+        "headline": "Tulang pergelangan tangan berubah menjadi ibu jari.",
+        "text": "Tulang sesamoid radialnya menekan bantalan kaki untuk menjepit batang bambu dengan bersih."
+      },
+      "closeup": {
+        "title": "Mantel salju dan bayangan",
+        "text": "Bulu putih menyembunyikannya dari salju musim dingin, sementara anggota badan yang gelap dan penutup telinga membantunya menghilang ke dalam bambu yang teduh."
+      }
+    },
+    "owl": {
+      "name": "Burung Hantu Bertanduk Besar",
+      "tags": [
+        "Penerbangan senyap",
+        "Telinga asimetris",
+        "putaran leher 270°"
+      ],
+      "description": "Gerigi seperti sisir di sepanjang tepi depan bulu utamanya memecah turbulensi udara, sehingga burung hantu bertanduk besar ini jatuh ke mangsanya dalam keheningan total. Bukaan telinga yang diimbangi memungkinkannya melakukan pelacakan suara tikus dalam tiga dimensi.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "45–63cm"
+        },
+        {
+          "label": "Lebar sayap",
+          "value": "100–145cm"
+        },
+        {
+          "label": "Diet",
+          "value": "Kelinci, tikus, burung, dan serangga besar"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Amerika Utara, Tengah dan Selatan"
+        }
+      ],
+      "habitat": "Hutan, tepi hutan, ngarai dan taman berhutan.",
+      "caption": "Sayap beludru yang menghapus suara terbang.",
+      "featured": {
+        "headline": "Empat belas vertebra leher.",
+        "text": "Dua kali lebih banyak dari manusia, membiarkan kepalanya berputar 270 derajat tanpa menggerakkan bahunya."
+      },
+      "closeup": {
+        "title": "Radar berumbai bulu",
+        "text": "Cakram wajahnya menyalurkan gelombang suara samar langsung ke celah telinga yang ditempatkan secara asimetris."
+      }
+    },
+    "treefrog": {
+      "name": "Katak Pohon Bermata Merah",
+      "tags": [
+        "Kilatan yang mengejutkan",
+        "Bantalan jari kaki hisap",
+        "Akrobat kanopi"
+      ],
+      "description": "Pada siang hari, katak pohon bermata merah menyelipkan sisi kobalt dan jari kaki jeruk keproknya di bawah punggung zamrud, menghilang ke dalam dedaunan hutan hujan. Jika diganggu, ia akan membuka mata merah delimanya yang cerah—kilat kilat sepersekian detik yang memberi waktu untuk melompat.",
+      "traits": [
+        {
+          "label": "Panjang",
+          "value": "5–7,5 cm"
+        },
+        {
+          "label": "Berat",
+          "value": "6–15 gram"
+        },
+        {
+          "label": "Diet",
+          "value": "Ngengat, jangkrik, lalat, dan katak yang lebih kecil"
+        },
+        {
+          "label": "Jangkauan",
+          "value": "Meksiko Selatan hingga Kolombia utara"
+        }
+      ],
+      "habitat": "Hutan hujan tropis dataran rendah dan alang-alang laguna yang menjorok.",
+      "caption": "Zamrud di siang hari, akrobat bermata rubi di malam hari.",
+      "featured": {
+        "headline": "Pilar mikroskopis yang lengket.",
+        "text": "Pilar nano heksagonal pada bantalan kakinya mencengkeram daun basah menggunakan tegangan air kapiler."
+      },
+      "closeup": {
+        "title": "Pewarnaan yang mengejutkan",
+        "text": "Pupil celah vertikal berada di dalam iris merah terang yang menyala ketika predator mendekat."
+      }
+    }
+  },
+  "zoo": {
+    "modeLabel": "Mode tampilan",
+    "vitrine": "Vitrine",
+    "zooMode": "Habitat Kebun",
+    "habitatNav": "Habitat",
+    "play": "Mulai Jalan",
+    "pause": "Jeda",
+    "selectAll": "Pilih semua",
+    "clear": "Hapus",
+    "selectedCount": "{{count}} / {{max}} di {{habitat}}",
+    "activeAnimals": "Hewan aktif di habitat",
+    "removeAnimal": "Hapus {{name}}",
+    "emptyHint": "Pilih hewan di atas untuk menempatkannya di habitat ini.",
+    "caption": "{{count}} hewan berkeliaran di {{habitat}}.",
+    "habitatsShort": {
+      "savanna": "Sabana",
+      "forest": "Hutan",
+      "wetland": "Lahan Basah",
+      "reef": "Terumbu Karang",
+      "abyss": "Laut Dalam",
+      "polar": "Es Kutub"
     }
   }
 }

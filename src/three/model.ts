@@ -23,8 +23,8 @@ const retainedModels = new Map<string, Group>();
 function prepareMaterials(root: Group, species?: Species) {
   const kind = species?.model.kind ?? 'walk';
   const id = species?.id ?? '';
-  const isFur = id === 'fox' || id === 'horse' || id === 'giraffe';
-  const isWet = kind === 'swim' || id === 'chameleon' || id === 'flamingo';
+  const isFur = id === 'fox' || id === 'horse' || id === 'giraffe' || id === 'wolf' || id === 'stag' || id === 'zebra' || id === 'panda';
+  const isWet = kind === 'swim' || id === 'chameleon' || id === 'flamingo' || id === 'treefrog';
   const isGelatinous = id === 'jellyfish' || id === 'dumbo';
 
   root.traverse((object) => {
@@ -71,7 +71,7 @@ function disposeModel(root: Object3D) {
 function retainModel(url: string, scene: Group) {
   retainedModels.delete(url);
   retainedModels.set(url, scene);
-  if (retainedModels.size <= 3) return;
+  if (retainedModels.size <= 8) return;
 
   for (const [oldUrl, oldScene] of retainedModels) {
     if (oldUrl === url) continue;

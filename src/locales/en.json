@@ -81,5 +81,28 @@
   },
   "language": {
     "label": "Language"
+  },
+  "zoo": {
+    "modeLabel": "Viewer mode",
+    "vitrine": "Vitrine",
+    "zooMode": "Zoo Habitat",
+    "habitatNav": "Habitats",
+    "play": "Play Zoo",
+    "pause": "Pause Zoo",
+    "selectAll": "Select all",
+    "clear": "Clear",
+    "selectedCount": "{{count}} / {{max}} in {{habitat}}",
+    "activeAnimals": "Active animals in habitat",
+    "removeAnimal": "Remove {{name}}",
+    "emptyHint": "Select animals above to place them in this habitat.",
+    "caption": "{{count}} animals roaming in {{habitat}}.",
+    "habitatsShort": {
+      "savanna": "Savanna",
+      "forest": "Forest",
+      "wetland": "Wetland",
+      "reef": "Coral Reef",
+      "abyss": "Deep Sea",
+      "polar": "Polar Ice"
+    }
   }
 }

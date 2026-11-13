@@ -150,8 +150,8 @@ export function Actor({ species, phase, origin, exitDir, reducedMotion, onExited
     }
     s.tween = gsap.to(s, {
       p: 1,
-      duration: origin ? 1.1 : 1.35,
-      delay: origin ? 0.08 : 0,
+      duration: origin ? 0.95 : 1.2,
+      delay: origin ? 0.05 : 0,
       ease: 'power3.out',
       onUpdate: emitViewChange,
       onComplete: () => {
@@ -198,7 +198,7 @@ export function Actor({ species, phase, origin, exitDir, reducedMotion, onExited
       .add(new Vector3(0, isAerialOrMarine ? m.unit * 0.15 : m.unit * 0.04, m.unit * 0.8));
     s.tween = gsap.to(s, {
       p: 1,
-      duration: 0.85,
+      duration: 0.72,
       ease: 'power2.in',
       onUpdate: emitViewChange,
       onComplete: onExited,
@@ -297,7 +297,12 @@ export function Actor({ species, phase, origin, exitDir, reducedMotion, onExited
     spinRef.current.scale.set(s.zoom, s.zoom * breathe, s.zoom);
 
     // --- Place and scale the whole rig ---------------------------------
-    const travelScale = s.mode === 'idle' ? 1 : s.scaleFrom + (s.scaleTo - s.scaleFrom) * s.p;
+    const scaleP = s.mode === 'enter' ? 1 - Math.pow(1 - s.p, 2.2) : s.p;
+    const settle =
+      s.mode === 'enter' && s.p > 0.72 && !reducedMotion
+        ? Math.sin(((s.p - 0.72) / 0.28) * Math.PI) * (grounded ? 0.032 : 0.022)
+        : 0;
+    const travelScale = (s.mode === 'idle' ? 1 : s.scaleFrom + (s.scaleTo - s.scaleFrom) * scaleP) * (1 + settle);
     const base = m.unit * specimenSize;
     travel.current.position.copy(s.pos);
     if (!grounded && !reducedMotion) {

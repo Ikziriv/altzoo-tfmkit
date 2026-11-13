@@ -7,9 +7,10 @@ import { useAtlas } from '../../store';
 import { controls, emitViewChange } from '../controls';
 import { getStageMetrics, stageElement } from '../stage';
 import { Biome, WORLD_LAYER } from './Biome';
-import type { HabitatId } from './specs';
+import { HABITAT_SPECS, type HabitatId } from './specs';
 import { habitatZoom } from './placement';
 import type { HabitatReveal } from './reveal';
+import { ZooCrowd } from '../ZooCrowd';
 
 /**
  * Persistent stage-anchored 3D biome world & vitrine renderer.
@@ -25,8 +26,12 @@ export function HabitatWorld({ reducedMotion }: { reducedMotion: boolean }) {
   const activeId = useAtlas((s) => s.activeId);
   const theme = useAtlas((s) => s.theme);
   const hidden = useAtlas((s) => s.habitatHidden);
+  const zooMode = useAtlas((s) => s.zooMode);
+  const zooHabitat = useAtlas((s) => s.zooHabitat);
+  const zooSelectedIds = useAtlas((s) => s.zooSelectedIds);
+  const zooPlaying = useAtlas((s) => s.zooPlaying);
   const species = byId(activeId);
-  const habitatId: HabitatId = species.model.habitat ?? 'savanna';
+  const habitatId: HabitatId = zooMode ? zooHabitat : (species.model.habitat ?? 'savanna');
   const [displayedId, setDisplayedId] = useState(habitatId);
   const [readyId, setReadyId] = useState<HabitatId | null>(null);
   const worldRef = useRef<Group>(null!);
@@ -51,7 +56,7 @@ export function HabitatWorld({ reducedMotion }: { reducedMotion: boolean }) {
     if (!fadingOut && readyId !== displayedId) return;
     const tween = gsap.to(reveal.progress, {
       value: fadingOut ? 0 : 1,
-      duration: fadingOut ? 0.24 : 0.85,
+      duration: fadingOut ? 0.2 : 0.62,
       ease: fadingOut ? 'power2.in' : 'power3.out',
       onUpdate: emitViewChange,
       onComplete: () => {
@@ -129,6 +134,14 @@ export function HabitatWorld({ reducedMotion }: { reducedMotion: boolean }) {
           <Biome key={displayedId} id={displayedId} theme={theme} reducedMotion={reducedMotion}
             reveal={reveal} onReady={onReady} />
         </Suspense>
+        {zooMode && !hidden && (
+          <ZooCrowd
+            spec={HABITAT_SPECS[displayedId]}
+            speciesIds={zooSelectedIds}
+            playing={zooPlaying}
+            reducedMotion={reducedMotion}
+          />
+        )}
       </group>
     </group>
   );

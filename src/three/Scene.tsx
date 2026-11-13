@@ -137,6 +137,7 @@ export function Scene() {
   const reducedMotion = useReducedMotion();
   const motionPaused = useAtlas((state) => state.motionPaused);
   const theme = useAtlas((state) => state.theme);
+  const zooMode = useAtlas((state) => state.zooMode);
   const staticMotion = reducedMotion || motionPaused;
 
   return (
@@ -159,7 +160,7 @@ export function Scene() {
         <HabitatWorld reducedMotion={staticMotion} />
         <Atmosphere />
         <PrefetchNextSpecies />
-        <Cast reducedMotion={staticMotion} />
+        {!zooMode && <Cast reducedMotion={staticMotion} />}
       </Canvas>
     </div>
   );

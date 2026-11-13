@@ -21,6 +21,9 @@ export function App() {
   const navCollapsed = useAtlas((s) => s.navCollapsed);
   const panelCollapsed = useAtlas((s) => s.panelCollapsed);
   const togglePanel = useAtlas((s) => s.togglePanel);
+  const zooMode = useAtlas((s) => s.zooMode);
+  const zooHabitat = useAtlas((s) => s.zooHabitat);
+  const zooSelectedIds = useAtlas((s) => s.zooSelectedIds);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -31,6 +34,7 @@ export function App() {
     detail && 'is-detail',
     navCollapsed && 'is-nav-collapsed',
     panelCollapsed && 'is-panel-collapsed',
+    zooMode && 'is-zoo-mode',
   ].filter(Boolean).join(' ');
 
   return (
@@ -42,8 +46,10 @@ export function App() {
         <main className="center">
           <SpeciesRail />
           <Stage />
-          <p className="caption" key={`${active.id}-${active.name}`}>
-            {active.caption}
+          <p className="caption" key={zooMode ? `zoo-${zooHabitat}` : `${active.id}-${active.name}`}>
+            {zooMode
+              ? t('zoo.caption', { count: zooSelectedIds.length, habitat: t(`habitats.${zooHabitat}`) })
+              : active.caption}
           </p>
         </main>
 

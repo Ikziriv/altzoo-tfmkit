@@ -2,7 +2,7 @@
 ================
 
 CC0 (public domain) — no attribution required
-- fox.glb, horse.glb, flamingo.glb, parrot.glb, stork.glb, duck.glb
+- fox.glb, horse.glb, flamingo.glb, parrot.glb, stork.glb, duck.glb, wolf.glb, stag.glb, zebra.glb
   Quaternius — https://quaternius.com
 - whale.glb, manta.glb, clownfish.glb, bluetang.glb, lionfish.glb, shark.glb, anglerfish.glb
   Quaternius (Animated Fish Pack) — https://quaternius.com
@@ -20,6 +20,9 @@ CC-BY 3.0 — attribution required (via poly.pizza)
 - tiger.glb      "Tiger" by Poly by Google      https://poly.pizza/m/5A3w06FXUup
 - penguin.glb    "Penguin" by Poly by Google    https://poly.pizza/m/fBXvsC6pe_V
 - crocodile.glb  "Crocodile" by Poly by Google  https://poly.pizza/m/2an6E2WjW3z
+- panda.glb      "Panda" by Poly by Google      https://poly.pizza/m/2T6A0o4Kq2h
+- owl.glb        "Great horned owl" by Poly by Google https://poly.pizza/m/fNkq9CwSG6d
+- treefrog.glb   "Tree frog" by Poly by Google  https://poly.pizza/m/cwyNyIba6WE
 
 Habitat dioramas (CC-BY 3.0, via poly.pizza)
 - env-acacia.glb  "Tree from the savanna" by hat          https://poly.pizza/m/uLxXsCfYb7
